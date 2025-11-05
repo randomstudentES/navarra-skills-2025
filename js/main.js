@@ -129,7 +129,6 @@ function dragElement(element) {
         pos1 = (pos3 - evento.clientX) * sensibilidadMovmimiento;
         pos3 = evento.clientX;
         element.style.left = (element.offsetLeft - pos1) + "px";
-        
     }
 
     function closeDragElement(pos1, pos3) {
@@ -149,11 +148,17 @@ function dragElement(element) {
             element.style.transform = "translateX(50%) rotate(20deg)";
             element.style.opacity = 0;
             sumarMatch();
+            setTimeout(() => {
+                tarjetasWrapper.removeChild(element);
+            }, 100);
         }
         // Comprobamos si la tarjeta ha sido movida a la izquierda
         else {
             element.style.transform = "translateX(-400px) rotate(-20deg)";
             element.style.opacity = 0;
+            setTimeout(() => {
+                tarjetasWrapper.removeChild(element);
+            }, 100);
         }
 
     }

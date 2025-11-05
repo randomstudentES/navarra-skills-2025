@@ -129,6 +129,33 @@ function dragElement(element) {
         pos1 = (pos3 - evento.clientX) * sensibilidadMovmimiento;
         pos3 = evento.clientX;
         element.style.left = (element.offsetLeft - pos1) + "px";
+        const adoptar = document.createElement("span");
+
+        // Intento de añadir el texto al arrastrar pero no conseguido, esta a medias
+        // if (pos3 > posicionOriginal) {
+        //     adoptar.innerText = "ADOPTAR";
+        //     adoptar.style.color = "green";
+        //     adoptar.style.position = "absolute";
+        //     adoptar.style.top = "0";
+        //     adoptar.style.left = "0";
+        //     adoptar.setAttribute("id", "adoptarTexto");
+        //     element.appendChild(adoptar);
+        //     console.log("DERECHA");
+            
+            
+        // } else if (pos3 < posicionOriginal) {
+        //     console.log("IZQUIERDA");
+        //     adoptar.innerText = "NOPE";
+        //     adoptar.style.color = "red";
+        //     adoptar.style.position = "absolute";
+        //     adoptar.style.top = "0";
+        //     adoptar.style.left = "0";
+        //     adoptar.setAttribute("id", "adoptarTexto");
+        //     element.appendChild(adoptar);
+        //     console.log("DERECHA");
+        // } else {
+        //     element.removeChild(adoptar);
+        // }
         
     }
 
@@ -149,11 +176,17 @@ function dragElement(element) {
             element.style.transform = "translateX(50%) rotate(20deg)";
             element.style.opacity = 0;
             sumarMatch();
+            setTimeout(() => {
+                tarjetasWrapper.removeChild(element);
+            }, 100);
         }
         // Comprobamos si la tarjeta ha sido movida a la izquierda
         else {
             element.style.transform = "translateX(-400px) rotate(-20deg)";
             element.style.opacity = 0;
+            setTimeout(() => {
+                tarjetasWrapper.removeChild(element);
+            }, 100);
         }
 
     }

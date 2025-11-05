@@ -93,6 +93,7 @@ div {
   width: 250px;
   position: absolute;
   left: 50%; transform: translateX(-50%);
+  transition: all .3s ease;
 }
 
 .tarjeta p {
@@ -120,7 +121,8 @@ div {
 #corazon {
   width: 60px;
   height: 60px;
-  background-color: #c9104a;
+  /* background-color: #c9104a; */
+  background-image: linear-gradient(to top right, #c9104a, #930472);
 }
 
 .error{

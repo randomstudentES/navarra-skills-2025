@@ -35,11 +35,17 @@ botones.forEach(boton => {
     boton.onclick = function() {
         const tarjeta = tarjetas[tarjetas.length -1]
         tarjetasWrapper.removeChild(tarjeta);
-        if (boton == botonCorazon){
-            contador += 1;
-            textoContador.innerText = contador;
-            contadorWrapper.style.display = "flex";
-        }
+        
     }
 });
 
+botonCorazon.onclick = function() {
+    const primeraTarjeta = tarjetas[tarjetas.length -1];
+    primeraTarjeta.style.transform = "translateX(50%) rotate(20deg)";
+    primeraTarjeta.style.opacity = 0;
+    contador += 1;
+    textoContador.innerText = contador;
+    contadorWrapper.style.display = "flex";
+}
+
+const primeraTarjeta = tarjetas[tarjetas.length -1 ];

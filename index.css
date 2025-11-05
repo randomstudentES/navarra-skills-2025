@@ -54,7 +54,7 @@ div {
 }
 
 .tarjetas img {
-  height: inherit;
+  height: 350px;
   border-radius: 20px;
   box-shadow: 0px 2px 5px gray;
   width: 250px;
@@ -71,12 +71,27 @@ div {
   position: absolute;
 } */
 
-.tarjeta {
-  border: 1px solid red;
+.contador {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.contador p {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+
+.tarjeta {  
   width: 250px;
   position: absolute;
-  /* left: 10%;
-  right: 20%; */
   left: 50%; transform: translateX(-50%);
 }
 

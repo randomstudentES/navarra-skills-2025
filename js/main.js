@@ -6,6 +6,10 @@ const botones = [resetBoton, botonCorazon, botonCross];
 const tarjetas = document.getElementsByClassName("tarjeta");
 const tarjetasWrapper = document.getElementsByClassName("tarjetas")[0];
 
+const contadorWrapper = document.getElementsByClassName("contador")[0];
+const textoContador = document.getElementById("contador");
+let contador = 0;
+
 const perros = [
     ["euri.webp", "Euri", "2 años"], 
     ["ion.webp", "Ion", "2 años"], 
@@ -31,6 +35,11 @@ botones.forEach(boton => {
     boton.onclick = function() {
         const tarjeta = tarjetas[tarjetas.length -1]
         tarjetasWrapper.removeChild(tarjeta);
+        if (boton == botonCorazon){
+            contador += 1;
+            textoContador.innerText = contador;
+            contadorWrapper.style.display = "flex";
+        }
     }
 });
 

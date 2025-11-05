@@ -81,6 +81,7 @@ div {
   position:absolute;
   right: 15px;
   top: 10px;
+  background-color: red;
 }
 
 .contador p {
@@ -93,7 +94,7 @@ div {
   width: 250px;
   position: absolute;
   left: 50%; transform: translateX(-50%);
-  transition: all .3s ease;
+  transition: all .2s ease;
 }
 
 .tarjeta p {

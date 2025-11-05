@@ -31,21 +31,33 @@ perros.forEach(element => {
     tarjetasWrapper.innerHTML += tarjeta;
 });
 
-botones.forEach(boton => {
-    boton.onclick = function() {
-        const tarjeta = tarjetas[tarjetas.length -1]
-        tarjetasWrapper.removeChild(tarjeta);
+// botones.forEach(boton => {
+//     boton.onclick = function() {
+//         const tarjeta = tarjetas[tarjetas.length -1]
+//         tarjetasWrapper.removeChild(tarjeta);
         
-    }
-});
+//     }
+// });
 
-botonCorazon.onclick = function() {
+botonCorazon.onclick = async function() {
     const primeraTarjeta = tarjetas[tarjetas.length -1];
     primeraTarjeta.style.transform = "translateX(50%) rotate(20deg)";
     primeraTarjeta.style.opacity = 0;
     contador += 1;
     textoContador.innerText = contador;
     contadorWrapper.style.display = "flex";
+
+    setTimeout(() => {
+        tarjetasWrapper.removeChild(primeraTarjeta);
+    }, 100);
+
 }
 
-const primeraTarjeta = tarjetas[tarjetas.length -1 ];
+botonCross.onclick = function() {
+    const primeraTarjeta = tarjetas[tarjetas.length -1];
+    primeraTarjeta.style.transform = "translateX(-400px) rotate(-20deg)";
+    primeraTarjeta.style.opacity = 0;
+    setTimeout(() => {
+        tarjetasWrapper.removeChild(primeraTarjeta);
+    }, 100);
+}

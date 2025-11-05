@@ -20,3 +20,91 @@ body {
   overflow: hidden;
   user-select: none;
 }
+
+div {
+  /* border: 1px solid red; */
+}
+
+.topNavBar, .logo {
+  display: flex;
+}
+
+.topNavBar {
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 15px;
+}
+
+.logo {
+  align-items: center;
+}
+
+#logo {
+  height: 40px;
+  margin-right: 5px;
+}
+
+.body {
+  text-align: center;
+}
+
+.tarjeta {
+  height: 350px;
+}
+
+.tarjeta img {
+  height: inherit;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px gray;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  margin-left: -120px
+}
+
+.botonesElegir{
+  margin-top: 25px;
+}
+
+.botonesElegir button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 2px 5px gray;
+}
+
+#corazon {
+  width: 60px;
+  height: 60px;
+  background-color: #c9104a;
+}
+
+.error{
+  position: absolute;
+  right: 20%;
+  left: 20%;
+  top: 50%;
+  bottom: 50%;
+  z-index: -1;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  right: 5%;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+.blue {
+  color: rgb(62, 101, 199);
+  text-decoration: none;
+}

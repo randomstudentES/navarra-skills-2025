@@ -48,18 +48,43 @@ div {
   text-align: center;
 }
 
-.tarjeta {
+.tarjetas {
   height: 350px;
+  /* border: 1px solid pink; */
 }
 
-.tarjeta img {
+.tarjetas img {
   height: inherit;
   border-radius: 20px;
   box-shadow: 0px 2px 5px gray;
   width: 250px;
+  /* position: absolute;
+  top:90px;
+  left: 50%; */
+  /* margin-left: -120px */
+}
+/* 
+.degradado {
+  height: inherit;
+  width: inherit;
+  background-color: pink;
   position: absolute;
-  left: 50%;
-  margin-left: -120px
+} */
+
+.tarjeta {
+  border: 1px solid red;
+  width: 250px;
+  position: absolute;
+  /* left: 10%;
+  right: 20%; */
+  left: 50%; transform: translateX(-50%);
+}
+
+.tarjeta p {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
 }
 
 .botonesElegir{
@@ -87,9 +112,10 @@ div {
   position: absolute;
   right: 20%;
   left: 20%;
-  top: 50%;
+  top: 40%;
   bottom: 50%;
   z-index: -1;
+  color: gray;
 }
 
 footer {
@@ -101,10 +127,14 @@ footer {
 
 footer p {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .blue {
   color: rgb(62, 101, 199);
   text-decoration: none;
+}
+
+.big {
+  font-weight: bold;
 }

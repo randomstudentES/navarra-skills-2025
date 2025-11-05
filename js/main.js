@@ -40,6 +40,12 @@ for (let index = 0; index < tarjetas.length; index++) {
 
 
 botonCorazon.onclick = function() {
+    
+    // Antes de ejecutar todo el código comprobamos si no quedan tarjetas
+    if (tarjetas.length == 0){
+        return;
+    }
+
     // Cogemos la tarjeta que está arriba del todo
     const primeraTarjeta = tarjetas[tarjetas.length -1];
 
@@ -65,6 +71,12 @@ botonCorazon.onclick = function() {
 }
 
 botonCross.onclick = function() {
+
+    // Antes de ejecutar todo el código comprobamos si no quedan tarjetas
+    if (tarjetas.length == 0){
+        return;
+    }
+
     // Cogemos la tarjeta que está arriba del todo
     const primeraTarjeta = tarjetas[tarjetas.length -1];
 

@@ -55,8 +55,8 @@ botonCorazon.onclick = function() {
     primeraTarjeta.style.opacity = 0;
 
     // Sumamos 1 al contador, actualizamos el texto 
-    contador += 1;
-    textoContador.innerText = contador;
+    sumarMatch();
+
     // Si es la primera vez le ponemos flex para que se muestre
     if (contador == 1)
     {
@@ -138,17 +138,29 @@ function dragElement(element) {
         document.onmouseup = null;
         document.onmousemove = null;
         
+        // Comprobamos si se ha arrastrado lo suficiente como para marcarlo como seleccionado, si no es así se resetea a la posición original
         if (Math.abs((element.offsetLeft - pos1) - pos3) < 1000 || Math.abs((pos3 - element.offsetLeft - pos1)) < 1000) {
             element.style.left = `${posicionOriginal}px`
             console.log("test");
             
-        } else if (pos3 < pos1){
+        }
+        // Comprobamos si la tarjeta ha sido movida a la derecha
+        else if (pos3 < pos1){
             element.style.transform = "translateX(50%) rotate(20deg)";
             element.style.opacity = 0;
-        } else {
+            sumarMatch();
+        }
+        // Comprobamos si la tarjeta ha sido movida a la izquierda
+        else {
             element.style.transform = "translateX(-400px) rotate(-20deg)";
             element.style.opacity = 0;
         }
 
     }
+}
+
+// Para quitar redundancia
+function sumarMatch(){
+    contador += 1;
+    textoContador.innerText = contador;
 }
